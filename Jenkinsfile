@@ -6,7 +6,7 @@ pipeline {
         sh '''echo PATH=${PATH}
 echo M2_HOME=${M2_HOME}
 git clone \'https://github.com/jglick/simple-maven-project-with-tests.git\'
-
+cd simple-maven-project-with-tests
 ${M2_HOME}/bin/mvn clean'''
       }
     }
