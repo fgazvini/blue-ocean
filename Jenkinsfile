@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''echo PATH=${PATH}
 echo M2_HOME=${M2_HOME}
-mvn clean'''
+${M2_HOME}/bin/mvn clean'''
       }
     }
     stage('Build') {
