@@ -12,7 +12,8 @@ ${M2_HOME}/bin/mvn clean'''
     }
     stage('Build') {
       steps {
-        sh '${M2_HOME}/bin/mvn -Dmaven.test.failure.ignore=true install'
+        sh '''cd simple-maven-project-with-tests
+${M2_HOME}/bin/mvn -Dmaven.test.failure.ignore=true install'''
       }
     }
     stage('Report') {
