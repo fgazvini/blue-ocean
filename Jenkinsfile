@@ -12,7 +12,7 @@ ${M2_HOME}/bin/mvn clean'''
     }
     stage('Build') {
       steps {
-        sh 'mvn -Dmaven.test.failure.ignore=true install'
+        sh '${M2_HOME}/bin/mvn -Dmaven.test.failure.ignore=true install'
       }
     }
     stage('Report') {
